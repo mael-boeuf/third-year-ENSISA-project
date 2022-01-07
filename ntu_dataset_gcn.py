@@ -177,7 +177,6 @@ class GCN(nn.Module):
         g.ndata['h'] = h
         return dgl.mean_nodes(g, 'h')
     
-# Create the model with given dimensions
 model = GCN(len(dataset[0][0].ndata['position_articulations'][0]), 32, dataset.num_classes+1)
 optimizer = th.optim.Adam(model.parameters(), lr=0.01)
 model.train()
