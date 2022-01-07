@@ -19,9 +19,9 @@ class NTUDataset(DGLDataset):
 
     def __init__(self, save_graph=True):
         self.save_graph = save_graph
-        self.load_skeleton_npy_path = "D:\\maelb\\Documents\\ENSISA\\Programmation\\Python\\Projet 3A\\data\\ntu-rgb\\nturgb+d_skeletons_npy\\"
-        self.missing_file_path = "D:\\maelb\\Documents\\ENSISA\\Programmation\\Python\\Projet 3A\\data\\ntu-rgb\\missing_skeletons\\ntu_rgbd_samples_with_missing_skeletons.txt"
-        self.save_graphs_dataset_path = "D:\\maelb\\Documents\\ENSISA\\Programmation\\Python\\Projet 3A\\data\\ntu-rgb\\graphs_dataset\\"
+        self.load_skeleton_npy_path = "data\\ntu-rgb\\nturgb+d_skeletons_npy\\"
+        self.missing_file_path = "data\\ntu-rgb\\missing_skeletons\\ntu_rgbd_samples_with_missing_skeletons.txt"
+        self.save_graphs_dataset_path = "data\\ntu-rgb\\graphs_dataset\\"
         super(NTUDataset, self).__init__(name="ntu")
 
     def process(self):
@@ -150,7 +150,7 @@ class NTUDataset(DGLDataset):
                     missing_files[line] = True 
         return missing_files
 
-graphs_dataset_path = "D:\\maelb\\Documents\\ENSISA\\Programmation\\Python\\Projet 3A\\data\\ntu-rgb\\graphs_dataset\\"
+graphs_dataset_path = "data\\ntu-rgb\\graphs_dataset\\"
 dataset = NTUDataset()
 
 num_examples = len(dataset)
